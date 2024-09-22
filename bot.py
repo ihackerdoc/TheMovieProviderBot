@@ -1,4 +1,3 @@
-
 import sys
 import glob
 import importlib
@@ -18,7 +17,6 @@ logging.basicConfig(
 )
 logging.getLogger("aiohttp").setLevel(logging.ERROR)
 logging.getLogger("aiohttp.web").setLevel(logging.ERROR)
-
 
 from pyrogram import Client, __version__
 from pyrogram.raw.all import layer
@@ -40,12 +38,10 @@ from lazybot import LazyPrincessBot
 from util.keepalive import ping_server
 from lazybot.clients import initialize_clients
 
-
 ppath = "plugins/*.py"
 files = glob.glob(ppath)
 LazyPrincessBot.start()
 loop = asyncio.get_event_loop()
-
 
 async def Lazy_start():
     print('\n')
@@ -88,7 +84,6 @@ async def Lazy_start():
     bind_address = "0.0.0.0"
     await web.TCPSite(app, bind_address, PORT).start()
     await idle()
-
 
 if __name__ == '__main__':
     try:
