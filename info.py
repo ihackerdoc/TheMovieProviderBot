@@ -57,6 +57,7 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 # Verify
 VERIFY = os.environ.get('VERIFY', 'False').lower() in ['true', '1'] # Verification On ( True ) / Off ( False )
 HOWTOVERIFY = os.environ.get('HOWTOVERIFY', 'https://t.me/dochacks/3') # How to open tutorial link for verification
+print(f"HOWTOVERIFY: {HOWTOVERIFY}")  # Add this line to verify the value
 
 # Others
 SHORTLINK_URL = environ.get('SHORTLINK_URL', 'omegalinks.in')
