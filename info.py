@@ -55,8 +55,8 @@ DATABASE_NAME = environ.get('DATABASE_NAME', "")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Verify
-VERIFY = bool(environ.get('VERIFY', False)) # Verification On ( True ) / Off ( False )
-HOWTOVERIFY = environ.get('HOWTOVERIFY', 'https://t.me/') # How to open tutorial link for verification
+VERIFY = environ.get('VERIFY', 'False').lower() in ['true', '1'] # Verification On ( True ) / Off ( False )
+HOWTOVERIFY = environ.get('HOWTOVERIFY', 'https://t.me/dochacks/3') # How to open tutorial link for verification
 
 # Others
 SHORTLINK_URL = environ.get('SHORTLINK_URL', 'omegalinks.in')
